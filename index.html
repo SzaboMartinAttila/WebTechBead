@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autók</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Autók</h1>
+
+    <ul id="cars">
+    </ul>
+
+    <section id="car-details" class="hidden">
+        <h2>Autó részletei</h2>
+        <div id="details-content">
+        </div>
+        <button id="back-to-list">Vissza a listához</button>
+    </section>
+
+    <section id="add-car">
+        <h2>Új autó hozzáadása</h2>
+        <form id="add-car-form">
+            <div>
+                <label for="brand">Márka:</label>
+                <input type="text" id="brand" name="brand" required>
+            </div>
+            <div>
+                <label for="model">Modell:</label>
+                <input type="text" id="model" name="model" required>
+            </div>
+            <div>
+                <label for="year">Évjárat (Év):</label> <input type="number" id="year" name="year" placeholder="YYYY" required> </div>
+            <div>
+                <label for="owner">Tulajdonos:</label> <input type="text" id="owner" name="owner" required>   </div>                                                     <div>
+                <label for="consumption">Fogyasztás (l/100km):</label>
+                <input type="number" step="0.1" id="consumption" name="consumption" required>
+            </div>
+            <div>
+                <label for="electric">Elektromos:</label>
+                <input type="checkbox" id="electric" name="electric">
+            </div>
+            <div>
+                <button type="submit">Hozzáadás</button>
+                <p id="add-car-error" class="hidden"></p>
+            </div>
+        </form>
+    </section>
+
+    <section id="edit-car" class="hidden">
+        <h2>Autó szerkesztése</h2>
+        <form id="edit-car-form">
+            <input type="hidden" id="edit-id" name="id">
+            <div>
+                <label for="edit-brand">Márka:</label>
+                <input type="text" id="edit-brand" name="brand" required>
+            </div>
+            <div>
+                <label for="edit-model">Modell:</label>
+                <input type="text" id="edit-model" name="model" required>
+            </div>
+            <div>
+                <label for="edit-year">Évjárat (Év):</label> <input type="number" id="edit-year" name="year" placeholder="YYYY" required> </div>
+            <div>
+                <label for="edit-owner">Tulajdonos:</label> <input type="text" id="edit-owner" name="owner" required>   </div>                                                       <div>
+                <label for="edit-consumption">Fogyasztás (l/100km):</label>
+                <input type="number" step="0.1" id="edit-consumption" name="consumption" required>
+            </div>
+            <div>
+                <label for="edit-electric">Elektromos:</label>
+                <input type="checkbox" id="edit-electric" name="electric">
+            </div>
+            <div>
+                <button type="submit">Mentés</button>
+                <button type="button" id="cancel-edit">Mégse</button>
+                <p id="edit-car-error" class="hidden"></p>
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
