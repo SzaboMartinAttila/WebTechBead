@@ -283,8 +283,7 @@ function addEventListenersToCarButtons() {
         const carId = button.dataset.id;
   
         if (!carId) {
-            console.warn('[eventListener] Gomb megnyomva id nélkül.
-                         :', button); 
+            console.warn('[eventListener] Button clicked without a data-id attribute:', button); 
             return;
         }
 
@@ -293,7 +292,7 @@ function addEventListenersToCarButtons() {
         } else if (button.classList.contains('edit-car-btn')) {
             editCar(carId);
         } else if (button.classList.contains('delete-car-btn')) {
-            console.log('[eventListener] Törlés gomb nyomva, id:', carId); 
+            console.log('[eventListener] Delete button clicked for ID:', carId); 
             deleteCar(carId);
         }
     });
